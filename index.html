@@ -1,6 +1,70 @@
+<!DOCTYPE html>
 <html>
-<head><title>jasen.me</title></head>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Loved+by+the+King' rel='stylesheet' type='text/css'>
+<style>
+  body {
+		font-family: "Loved by the King",cursive;
+		font-size: 30px;
+		background:
+		linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+		linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+		linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+		linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+		linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+		linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+		background-color: #131313;
+		background-size: 20px 20px;
+	}
+	#left {
+		width:200px;
+		min-height:100%;
+		position: absolute;
+		top:0;
+		left:0;
+		display: block;
+		background-color: rgb(255,255,92);
+		float: left;
+		padding: 20px;
+		border: 1px;
+	}
+	#right {
+		width:80%;
+		height:200px;
+		position: relative;
+		left:232px;
+		margin-bottom: 60px;
+		background-color: orange;
+		float: left;
+		-webkit-transition: -webkit-transform 0.5s ease-in-out;
+		-webkit-transform-origin: 0% 50%;
+		-webkit-transform: skewY(10deg);
+		padding: 20px;
+		padding-left: 80px;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+		background-color: rgb(255,170,0);
+	}
+																								      
+	#right:hover {	
+		-webkit-transform: skewY(0deg);
+		-webkit-transform-origin:0% 50%;
+	}
+</style>
+<title>jasen.me</title>
+</head>
 <body>
-<span style="font-size: 50px;">Welcome to jasen.me, website coming soon!</span>
+<div id="left">
+	<span style="font-size: 60px; text-shadow: 0px 0px 10px green;">jasen.me</span>
+</div>
+<div id="right" style="background-color: rgb(92,171,255);">
+	Hey there, my name is Bob!
+</div>
+<div id="right" style="background-color: rgb(255,201,92);">
+	Hey man hows it going?!
+</div>
+<div id="right" style="background-color: rgb(92,255,92);">
+	jasen.me has been moved over to github pages!
+</div>
 </body>
 </html>
