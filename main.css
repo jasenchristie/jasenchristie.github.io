@@ -1,0 +1,108 @@
+body {
+	font-family: "Loved by the King",cursive;
+	font-size: 30px;
+	background-color: #6d695c;
+	background-image:
+	repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+	repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+	linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+	linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+	background-size: 70px 120px;
+}
+#left {
+	width:200px;
+	min-height:100%;
+	position: fixed;
+	top:0;
+	left:0;
+	display: block;
+	background-color: rgb(255,255,161);
+	float: left;
+	padding: 20px;
+	border: 1px;
+}
+
+#right {
+	width:80%;
+	position: relative;
+	left:232px;
+	margin-top: 60px;
+	background-color: orange;
+	float: left;
+	-webkit-transition: -webkit-transform 0.5s ease-in-out;
+	-webkit-transform-origin: 0% 50%;
+	-webkit-transform: skewY(10deg);
+	transition: transform 0.5s ease-in-out;
+	transform-origin: 0% 50%;
+	transform: skewY(10deg);
+	padding: 20px;
+	padding-left: 80px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-color: rgb(255,170,0);
+}
+																									      
+#right:hover {	
+	-webkit-transform: skewY(0deg);
+	transform: skewY(0deg);
+}
+
+#rheader {
+	font-weight:bold;
+	font-size: 35px;
+}
+
+#social {
+	position: fixed;
+	top:-5px;
+	width: 60px;
+	display: block;
+	float: right;
+	padding: 10px;
+	text-align:center;
+	background-color: black;
+	border: solid 2px;
+	border-color: white;
+	color: white;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	-webkit-transition: -webkit-transform 0.5s ease-in-out;
+	-webkit-transform-origin: 50% 0%;
+	-webkit-transform: translateY(-15px);
+	transition: transform 0.5s ease-in-out;
+	transform-origin: 50% 0%;
+	transform: translateY(-15px);
+}
+
+#social:hover {
+	-webkit-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+#social a {
+	color: white;
+}
+
+#social a:hover {
+	color: red;
+}
+
+a {
+	text-decoration: none;
+	color: blue;
+}
+
+a:hover {
+	color: red;
+}
+
+#thumbnail {
+	background-color: white;
+	border-radius: 10px;
+	padding: 10px;
+	width: 535px;
+	height: 300px;
+	float: left;
+	margin-left: 50px;
+	margin-bottom: 50px;
+}
