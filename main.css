@@ -41,6 +41,11 @@ span.jasen:hover {
 	transform: scale(1.2) rotate(10deg);
 }
 
+span.date {
+	font-weight: bold;
+	float: right;
+}
+
 a {
 	color: black;
 	text-decoration: none;
@@ -53,6 +58,7 @@ a:hover {
 a.toplink {
 	text-decoration: none;
 	color: white;
+	margin-right: 10px;
 }
 
 a.toplink:hover {

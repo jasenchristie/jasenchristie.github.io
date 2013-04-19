@@ -7,10 +7,10 @@
 <body>
 <div class="header">
 	<span class="jasen" style="float: left; font-size: 20px; margin-left: 20px; margin-top: 12px;">jasen.me</span>
-	<span style="float: right; margin-right: 20px; margin-top: 15px;">
-		<a class="toplink" href="#">Home</a> -
-		<a class="toplink" href="#">Games</a> -
-		<a class="toplink" href="#">Downloads</a>
+	<span style="float: right; margin-right: 20px; margin-top: 16px;">
+		<a class="toplink" href="./">Home</a>
+		<a class="toplink" href="#">Games</a>
+		<a class="toplink" href="downloads.html">Downloads</a>
 	</span>
 </div>
 <div style="margin-top: 100px;">
@@ -18,7 +18,7 @@
 		<span style="font-weight: bold;">Introducing Decay!</span>
 		<a href="#introducing_decay" style="font-size: 14px;">(link)</a>
 		<a href="#comment" style="font-size: 14px;">(comment)</a>
-		<span style="font-weight: bold; float: right;">Apr 19</span>
+		<span class="date">Apr 19</span>
 
 		<p><div id="thumbnail"><img src="images/decay1.png" style="height: 300px; border-radius: 5px;" alt="game" /></div>
 		So I've finally got a name for my game, Decay! And with it comes a completly new art style.
@@ -30,19 +30,16 @@
 		<span style="font-weight: bold;">Experimenting with shaders!</span>
 		<a href="#experimenting_with_shaders" style="font-size: 14px;">(link)</a>
 		<a href="#comment" style="font-size: 14px;">(comment)</a>
-		<span style="font-weight: bold; float: right;">Mar 28</span>
+		<span class="date">Mar 28</span>
 
 		<p>Over the last couple of days I've been playing around with shaders in libgdx, so far I've got a few nice effects happening! Most of the webgl shaders are easily ported to work within libgdx.
-		<div id="thumbnail"><img src="images/shader1.png" style="height: 300px; border-radius: 5px;" alt="game" /></div></p>
+		<div id="thumbnail"><img src="images/shader1.png" style="height: 300px; border-radius: 5px;" alt="game" /></div><div id="thumbnail"><img src="images/shader2.png" style="height: 300px; border-radius: 5px;" alt="game" /></div></p>
 	</div>
 
 	<div class="section" id="comment">
 		<div id="disqus_thread"></div>
 	    <script type="text/javascript">
-	        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-	        var disqus_shortname = 'jasen'; // required: replace example with your forum shortname
-
-	        /* * * DON'T EDIT BELOW THIS LINE * * */
+	        var disqus_shortname = 'jasen';
 	        (function() {
 	            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 	            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
@@ -55,7 +52,7 @@
 </div>
 
 <div style="
-	position: absolute;
+	position: fixed;
 	display: block;
 	float: right;
 	right: 20px;
