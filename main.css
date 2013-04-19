@@ -1,170 +1,87 @@
 body {
-	font-family: "Loved by the King",cursive;
-	font-size: 30px;
-	background-color: #6d695c;
-	background-image:
-	repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
-	repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
-	linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
-	linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
-	background-size: 70px 120px;
+	background-color: #e89041;
+	font-family: 'Share Tech Mono', sans-serif;
 }
-#left {
-	width:200px;
-	min-height:100%;
-	position: fixed;
-	top:0;
-	left:0;
-	display: block;
-	background-color: rgb(255,255,161);
-	float: left;
-	padding: 20px;
-	border: 1px;
-	z-index: 1;
+
+div.header {
+	background-color: #2e2e2e;
+	color:white;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width:100%;
+	height: 50px;
 	box-shadow: 0 0 35px black;
-	background-image:
-	repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
-	repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
-	linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
-	linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
-	background-size: 70px 120px;
+
 }
 
-#right {
-	width:70%;
-	position: relative;
-	left:232px;
-	margin-top: 60px;
-	background-color: orange;
-	float: left;
-	-webkit-transition: -webkit-transform 0.5s ease-in-out;
-	-webkit-transform-origin: 0% 50%;
-	-webkit-transform: skewY(8deg);
-	-moz-transition: -moz-transform 0.5s ease-in-out;
-	-moz-transform-origin: 0% 50%;
-	-moz-transform: skewY(8deg);
-	transition: transform 0.5s ease-in-out;
-	transform-origin: 0% 50%;
-	transform: skewY(8deg);
+div.section {
+	width: 60%;
+	background-color: #ffc787;
 	padding: 20px;
-	padding-left: 80px;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
-	background-color: rgb(255,170,0);
-	box-shadow: 0 0 35px black;
-}
-																									      
-#right:hover {	
-	-webkit-transform: skewY(0deg);
-	-moz-transform: skewY(0deg);
-	transform: skewY(0deg);
+	margin: auto;
+	border-radius: 10px;
+	margin-bottom: 50px;
+	box-shadow: 0 0 15px black;
+	font-size: 20px;
 }
 
-#rheader {
-	font-weight:bold;
-	font-size: 35px;
-}
-
-img {
+span.jasen {
 	-webkit-transition: -webkit-transform 0.2s ease-in-out;
 	-moz-transition: -moz-transform 0.2s ease-in-out;
-	transition: transform 0.5s ease-in-out;
-	-webkit-transform-origin: 100% 100%;
-	-moz-transform-origin: 100% 100%;
-	transform-origin: 100% 100%;
-	
+	transition: transform 0.2s ease-in-out;
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
 }
 
-img:hover {
-	-webkit-transform: translate(50%,50%) scale(2);
-	-moz-transform: translate(50%,50%) scale(2);
-	transform: translate(50%,50%) scale(2);
-}
-
-#social {
-	position: fixed;
-	top:-5px;
-	width: 60px;
-	display: block;
-	float: right;
-	padding: 10px;
-	text-align:center;
-	background-color: black;
-	border: solid 2px;
-	border-color: white;
-	color: white;
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
-	-webkit-transition: -webkit-transform 0.5s ease-in-out;
-	-webkit-transform-origin: 50% 0%;
-	-webkit-transform: translateY(-15px);
-	transition: transform 0.5s ease-in-out;
-	transform-origin: 50% 0%;
-	transform: translateY(-15px);
-}
-
-#social:hover {
-	-webkit-transform: translateY(0px);
-	transform: translateY(0px);
-}
-
-#social a {
-	color: white;
-}
-
-#social a:hover {
-	color: red;
-}
-
-#downloadlink a {
-	color: white;
-}
-
-#downloadlink a:hover {
-	color: yellow;
+span.jasen:hover {
+	-webkit-transform: scale(1.2) rotate(10deg);
+	-moz-transform: scale(1.2) rotate(10deg);
+	transform: scale(1.2) rotate(10deg);
 }
 
 a {
+	color: black;
 	text-decoration: none;
-	color: blue;
 }
 
 a:hover {
-	color: red;
+	color: #b2382d;
+}
+
+a.toplink {
+	text-decoration: none;
+	color: white;
+}
+
+a.toplink:hover {
+	color: gray;
+}
+
+img {
+	padding: 5px;
 }
 
 #thumbnail {
 	background-color: white;
 	border-radius: 10px;
 	padding: 10px;
-	width: 535px;
-	height: 300px;
-	float: left;
-	margin-left: 50px;
-	margin-bottom: 50px;
+	width: 545px;
+	height: 310px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	-webkit-transition: -webkit-transform 0.2s ease-in-out;
+	-moz-transition: -moz-transform 0.2s ease-in-out;
+	transition: transform 0.5s ease-in-out;
+	-webkit-transform-origin: 100% 100%;
+	-moz-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
 }
 
-/* Let's get this party started */
-::-webkit-scrollbar {
-    width: 12px;
-    background-color: black;
-}
- 
-/* Track */
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background-color: gray;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background: rgba(30,30,30,0.8); 
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-}
-::-webkit-scrollbar-thumb:window-inactive {
-	background: rgba(10,10,10,0.4); 
+#thumbnail:hover {
+	-webkit-transform: translate(50%,50%) scale(2);
+	-moz-transform: translate(50%,50%) scale(2);
+	transform: translate(50%,50%) scale(2);
 }
