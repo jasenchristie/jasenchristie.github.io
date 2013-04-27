@@ -1,16 +1,30 @@
+@font-face { font-family: munro; src: url('munro.ttf'); }
+
 body {
 	background-image: url("background.png");
 	background-color: #9ae8ff;
 	background-repeat: repeat-x;
-	font-family: 'VT323', cursive;
+	background-attachment: fixed;
+	font-family: munro;
 	font-size: 25px;
+}
+
+div.links {
+	background-color: rgba(0,0,30,0.3);
+	width: 100%;
+	left: 0;
+	position: absolute;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 25px;
 }
 
 div.main {
 	background-color: rgba(1,1,2,0.1);
 	width: 50%;
 	margin: auto;
-	margin-top: 50px;
+	margin-top: 120px;
 	margin-bottom: 50px;
 	padding: 25px;
 	border-radius: 20px;
