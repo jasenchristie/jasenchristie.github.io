@@ -32,7 +32,7 @@
 			'uniform sampler2D uSampler;',
 
 			'void main(void) {',
-			'   gl_FragColor = texture2D(uSampler, vTextureCoord) + vec4(gl_FragCoord.x/2000.0,gl_FragCoord.y/1200.0,gl_FragCoord.x/1000.0,0);',
+			'   gl_FragColor = texture2D(uSampler, vTextureCoord) + vec4(gl_FragCoord.y/1000.0,gl_FragCoord.x/1000.0,gl_FragCoord.x/500.0,0);',
 			'}'
 		];
 	
@@ -47,8 +47,9 @@
 		particles[i] = new PIXI.Sprite(texture);
 		particles[i].anchor.x = 0.5;
 		particles[i].anchor.y = 0.5;
-		particles[i].scale.x = 2.0;
-		particles[i].scale.y = 2.0;
+		var s = Math.random();
+		particles[i].scale.x = 2.0+s;
+		particles[i].scale.y = 2.0+s;
 		particles[i].position.x = Math.random()*window.innerWidth;
 		particles[i].position.y = Math.random()*window.innerHeight;
 		particles[i].blendMode = PIXI.blendModes.ADD;
@@ -69,7 +70,7 @@
         requestAnimFrame( animate );
 		
 		for (var i=0; i<NUM_PARTICLES; i++) {
-			particles[i].x += Math.sin(.5)*Math.random()*2.0;
+			particles[i].x += Math.random()*1.0;
 			particles[i].y += 2.5;
 			if (particles[i].x > window.innerWidth+30) particles[i].x = -30;
 			if (particles[i].y > window.innerHeight+30) particles[i].y = -30;
