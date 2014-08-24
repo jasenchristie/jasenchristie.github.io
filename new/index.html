@@ -15,7 +15,7 @@
 	<script>
 
 	// create an new instance of a pixi stage
-    var stage = new PIXI.Stage(0x66FF99);
+    var stage = new PIXI.Stage(0x000000); // 0x66FF99
  
     // create a renderer instance.
     var renderer = PIXI.autoDetectRenderer(window.innerWidth-4, window.innerHeight-4);
@@ -25,36 +25,52 @@
  
     requestAnimFrame( animate );
 	
-	var myfilter = new PIXI.AbstractFilter("frag");
+	var myfilter = new PIXI.AbstractFilter();
+	myfilter.fragmentSrc = [
+			'precision mediump float;',
+			'varying vec2 vTextureCoord;',
+			'uniform sampler2D uSampler;',
+
+			'void main(void) {',
+			'   gl_FragColor = texture2D(uSampler, vTextureCoord) + vec4(gl_FragCoord.x/2000.0,gl_FragCoord.y/1200.0,gl_FragCoord.x/1000.0,0);',
+			'}'
+		];
 	
     var texture = PIXI.Texture.fromImage("particle.png");
 	var texture2 = PIXI.Texture.fromImage("logo.png");
 	
-	var logo = new PIXI.Sprite(texture2);
-	logo.position.x = window.innerWidth/3.;
-	logo.position.y = window.innerHeight/4.;
-	stage.addChild(logo);
+	var NUM_PARTICLES = 100;
 	
-	var particles = [100];
+	var particles = [NUM_PARTICLES];
 	
-	for (var i=0; i<100; i++) {
+	for (var i=0; i<NUM_PARTICLES; i++) {
 		particles[i] = new PIXI.Sprite(texture);
 		particles[i].anchor.x = 0.5;
 		particles[i].anchor.y = 0.5;
+		particles[i].scale.x = 2.0;
+		particles[i].scale.y = 2.0;
 		particles[i].position.x = Math.random()*window.innerWidth;
 		particles[i].position.y = Math.random()*window.innerHeight;
-		//particles[i].filters = [myfilter];
+		particles[i].blendMode = PIXI.blendModes.ADD;
+		particles[i].filters = [myfilter];
 		
 		stage.addChild(particles[i]);
 	}
+	
+	var logo = new PIXI.Sprite(texture2);
+	logo.position.x = window.innerWidth/3.;
+	logo.position.y = window.innerHeight/4.;
+	logo.blendMode = PIXI.blendModes.ADD;
+	logo.filters = [myfilter];
+	stage.addChild(logo);
  
     function animate() {
  
         requestAnimFrame( animate );
 		
-		for (var i=0; i<100; i++) {
-			particles[i].x += Math.sin(1)*Math.random()*1.0;
-			particles[i].y += 1.;
+		for (var i=0; i<NUM_PARTICLES; i++) {
+			particles[i].x += Math.sin(.5)*Math.random()*2.0;
+			particles[i].y += 2.5;
 			if (particles[i].x > window.innerWidth+30) particles[i].x = -30;
 			if (particles[i].y > window.innerHeight+30) particles[i].y = -30;
 			particles[i].rotation += Math.random()*0.01;
