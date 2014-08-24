@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>pixi.js example 1</title>
+	<title>jasen.me</title>
 	<style>
 		body {
 			margin: 0;
@@ -25,26 +25,40 @@
  
     requestAnimFrame( animate );
 	
-	// create a texture from an image path
+	var myfilter = new PIXI.AbstractFilter("frag");
+	
     var texture = PIXI.Texture.fromImage("particle.png");
-    // create a new Sprite using the texture
-    var bunny = new PIXI.Sprite(texture);
- 
-    // center the sprites anchor point
-    bunny.anchor.x = 0.5;
-    bunny.anchor.y = 0.5;
- 
-    // move the sprite t the center of the screen
-    bunny.position.x = 200;
-    bunny.position.y = 150;
- 
-    stage.addChild(bunny);
+	var texture2 = PIXI.Texture.fromImage("logo.png");
+	
+	var logo = new PIXI.Sprite(texture2);
+	logo.position.x = window.innerWidth/3.;
+	logo.position.y = window.innerHeight/4.;
+	stage.addChild(logo);
+	
+	var particles = [100];
+	
+	for (var i=0; i<100; i++) {
+		particles[i] = new PIXI.Sprite(texture);
+		particles[i].anchor.x = 0.5;
+		particles[i].anchor.y = 0.5;
+		particles[i].position.x = Math.random()*window.innerWidth;
+		particles[i].position.y = Math.random()*window.innerHeight;
+		//particles[i].filters = [myfilter];
+		
+		stage.addChild(particles[i]);
+	}
  
     function animate() {
  
         requestAnimFrame( animate );
 		
-		bunny.rotation += 0.01;
+		for (var i=0; i<100; i++) {
+			particles[i].x += Math.sin(1)*Math.random()*1.0;
+			particles[i].y += 1.;
+			if (particles[i].x > window.innerWidth+30) particles[i].x = -30;
+			if (particles[i].y > window.innerHeight+30) particles[i].y = -30;
+			particles[i].rotation += Math.random()*0.01;
+		}
  
         // render the stage   
         renderer.render(stage);
